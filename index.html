@@ -1,69 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Company</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1 class="logo">Your Company</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+          <a href="index.html"><img src="images/logo.png" alt="Logo" class="logo"></a>
+        </div>
+        <nav>
+          <ul class="navbar">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="lab-focus.html">Lab Focus</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="featured-media.html">Featured Media</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </header>      
+      
 
-  <section id="hero">
-    <div class="container">
-      <h2>Welcome to Your Company</h2>
-      <p>We deliver excellence in every project we undertake.</p>
-    </div>
-  </section>
+    <!-- Main Content -->
+    <main>
+        <!-- Video Section -->
+        <section class="video-section">
+            <video autoplay muted loop class="landing-video">
+                <source src="videos/landing-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
 
-  <section id="about">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>Your Company is a leader in providing top-notch solutions for businesses worldwide. We pride ourselves on our dedication to quality and customer satisfaction.</p>
-    </div>
-  </section>
+        <!-- Features Section -->
+        <section class="features">
+            <div class="feature">
+              <img src="images/stealth-assessment.svg" alt="Stealth Assessment">
+              <button>Stealth Assessment</button>
+            </div>
+            <div class="feature">
+              <img src="images/creativity.svg" alt="Creativity">
+              <button>Creativity</button>
+            </div>
+            <div class="feature">
+              <img src="images/physics-learning.svg" alt="Physics Learning">
+              <button>Physics Learning</button>
+            </div>
+            <div class="feature">
+              <img src="images/ai.svg" alt="AI">
+              <button>AI</button>
+            </div>
+          </section>          
+          
+    </main>
 
-  <section id="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <ul class="services-list">
-        <li>Consulting</li>
-        <li>Web Development</li>
-        <li>Marketing Strategies</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <form action="#" method="post">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>© 2025 Your Company. All Rights Reserved.</p>
-    </div>
-  </footer>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Your Organization. All rights reserved.</p>
+    </footer>
 </body>
 </html>

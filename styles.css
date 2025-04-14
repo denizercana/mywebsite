@@ -1,93 +1,474 @@
-* {
+/* General Body Styling */
+body {
+    font-family: 'Century Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+header {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+.logo {
+    height: 50px;
+}
+
+.logo-container {
+    flex-shrink: 0;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* ✅ center the menu within same padding */
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #333;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background-color: #f2f2f2;
+}
+
+
+/* Video Section Styling */
+.video-section {
+    margin-top: 5rem;
+    padding: 1rem 5%; /* Consistent padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+.landing-video {
+    width: 70%; /* Adjusted video size */
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Features Section Styling */
+.features {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem 2rem; /* Aligns with your navbar */
+    gap: 2rem;
+    flex-wrap: wrap;
+    font-family: 'Century Gothic', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 220px;
+    max-width: 220px;
+    text-align: center;
+  }
+  
+  .feature img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 1.2rem;
+    object-fit: contain;
+  }
+  
+  .feature button {
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Century Gothic', sans-serif;
+    cursor: pointer;
+    min-width: 160px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .feature button:hover {
+    background-color: #009dd6;
+  }
+  /* Team Section Styling */
+.team-section {
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+/* Team Information */
+.team-info {
+    text-align: center;     /* Center-align name and title */
+    margin-bottom: 1rem;    /* Add spacing below the info block */
+}
+
+.team-info h3 {
+    margin: 0;              /* Remove unnecessary margins */
+    font-size: 1.5rem;      /* Increase font size for the name */
+    color: #222;            /* Darker color for better readability */
+}
+
+.team-info p {
+    margin: 0;              /* Remove spacing between lines */
+    font-size: 1rem;        /* Consistent font size for titles */
+    color: #666;            /* Lighter color for differentiation */
+    line-height: 1.2;       /* Compact spacing between lines */
+}
+
+.team-description {
+    text-align: left;
+    margin-top: 0rem;
+    color: #555;
+    line-height: 1.6;
+    font-size: 1rem;
+    text-align: justify; /* Justify the paragraph text */
+    margin-top: 0rem; /* Reduced top margin for tighter spacing */
+}
+/* Grey Band Styling */
+.grey-band {
+    background-color: #f9f9f9; /* Light grey background */
+    padding: 1rem 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+/* Team Content Section */
+.our-team .team-content {
+    padding: 2rem;
+    background-color: #ffffff; /* White background */
+    text-align: justify;
+    line-height: 1.6;
+    color: #373737;
+}
+
+/* Graduate Assistants Section */
+.graduate-assistants .assistant-grid {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #ffffff; /* White background */
+}
+
+.graduate-assistants .assistant {
+    text-align: center;
+    flex: 1 1 200px;
+    max-width: 220px;
+}
+
+.graduate-assistants .assistant img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+.graduate-assistants .assistant h3 {
+    margin: 0.5rem 0 0.2rem 0; /* Reduce spacing above and below */
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.graduate-assistants .assistant p {
+    margin: 0.2rem 0; /* Compact spacing for text */
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Former Lab Members Section */
+.former-lab-members {
+    padding: 2rem;
+    background-color: #ffffff; /* White background */
+}
+
+.former-lab-members h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 0;
+}
+
+/* General Grid for Assistants and Former Members */
+.assistant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Equal-width columns */
+    justify-items: center; /* Center-align content in each grid cell */
+    gap: 2rem; /* Add spacing between rows and columns */
+    padding: 2rem; /* Add padding around the grid */
+    background-color: #ffffff; /* Ensure a consistent white background */
+}
+
+/* Individual Assistant or Member */
+.assistant {
+    text-align: center; /* Center-align each assistant/member */
+    max-width: 220px; /* Set a consistent max width */
+}
+
+/* Profile Pictures */
+.assistant img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd; /* Add a border for visual separation */
+    margin-bottom: 1rem; /* Space below the image */
+}
+
+/* Add padding to the main content area */
+.publications-content {
+    padding: 2rem 4rem; /* Adjust padding as per previous pages */
+    max-width: 1200px; /* Optional: Restrict the content width for better readability */
+    margin: 0 auto; /* Center the content on the page */
+}
+
+/* Grey Band Styling for Title */
+.grey-band {
+    padding: 2rem 2rem; /* Increase padding for better spacing */
+    background-color: #f9f9f9; /* Light grey background */
+    text-align: center;
+    margin-top: 5.5rem; /* Increase margin to push the grey band lower */
+}
+
+/* h1 Title Styling */
+.grey-band h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 2.5rem; /* Set font size for better visibility */
+    color: #333; /* Ensure text color matches the design */
+}
+
+/* Add spacing between year sections */
+.year-section {
+    margin-bottom: 2rem;
+}
+
+/* General Reset */
+body, h1, h2, p, ul, li, a {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+/* Body Styling */
+body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-  }
-  
-  .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-  }
-  
-  header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-  }
-  
-  header .logo {
-    float: left;
-  }
-  
-  header nav {
-    float: right;
-  }
-  
-  header ul {
-    list-style: none;
-  }
-  
-  header ul li {
-    display: inline;
-    margin-left: 20px;
-  }
-  
-  header ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  #hero {
-    background: #f4f4f4;
-    padding: 2rem 0;
-    text-align: center;
-  }
-  
-  #hero h2 {
     color: #333;
-  }
-  
-  #about,
-  #services,
-  #contact {
-    padding: 2rem 0;
-  }
-  
-  #contact form {
+    background-color: #f9f9f9;
+}
+
+/* Header Styling */
+header {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+header .logo-container img {
+    max-height: 50px;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar li a.active {
+    color: #007acc;
+}
+
+/* Grey Band Title */
+.grey-band {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.grey-band h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Projects Content */
+.projects-content {
+    font-family: 'Century Gothic', sans-serif;
     display: flex;
     flex-direction: column;
-  }
-  
-  #contact label {
-    margin-top: 1rem;
-  }
-  
-  #contact input,
-  #contact textarea {
-    margin-top: 0.5rem;
-    padding: 0.5rem;
-    font-size: 1rem;
-  }
-  
-  #contact button {
-    margin-top: 1rem;
-    padding: 0.5rem;
-    background: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  footer {
-    background: #333;
-    color: #fff;
+    gap: 3rem;
+    padding: 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.grey-band {
+    background-color: #e7e7e7; /* Light grey background */
+    padding: 2rem;
     text-align: center;
-    padding: 1rem 0;
+    margin-top: 5rem; /* Adjust for the fixed header */
+}
+
+.grey-band h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+}
+
+/* Individual Project */
+.project {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* Image Styling */
+.project-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Project Details Styling */
+.project-details h2 {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.project-details p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.project-details .button {
+    display: inline-block;
+    background-color: #007acc;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.project-details .button:hover {
+    background-color: #005f99;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-image img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
     margin-top: 2rem;
-  }
+}
+
+/* Responsive Navbar Styling */
+@media (max-width: 768px) {
+    .navbar {
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .navbar a {
+        font-size: 0.9rem; /* Slightly smaller font size */
+        padding: 0.3rem 0.6rem; /* Adjust padding */
+    }
+}
